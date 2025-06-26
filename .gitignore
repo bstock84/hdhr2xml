@@ -9,5 +9,10 @@
 !.vscode/launch.json
 !binaries/*.zip
 !binaries/*.exe
+!.dockerignore
+!DOCKER_README.md
+!docker-compose.yml
+!Dockerfile
+!requirements.txt
 
 build/

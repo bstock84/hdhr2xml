@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  hdhomerun-epg:
+    build: .
+    container_name: hdhomerun-epg-converter
+    volumes:
+      # Mount output directory for EPG files
+      - ./output:/app/output
+    network_mode: host  # Allows access to local network devices like HDHomeRun
+    environment:
+      - TZ=America/New_York  # Set your timezone
+    command: [
+      "--host", "hdhomerun.local",
+      "--filename", "/app/output/epg.xml",
+      "--days", "7",
+      "--hours", "3",
+      "--debug", "on"
+    ]
+    restart: unless-stopped
