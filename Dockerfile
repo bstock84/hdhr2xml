@@ -22,11 +22,17 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the Python script
 COPY HDHomeRunEPG_To_XmlTv.py .
 
+# Copy entrypoint script
+COPY entrypoint.sh .
+
 # Create output directory for EPG files
 RUN mkdir -p /app/output
 
-# Set the default command
-ENTRYPOINT ["python", "HDHomeRunEPG_To_XmlTv.py"]
+# Set entrypoint script as executable
+RUN chmod +x entrypoint.sh
+
+# Set the entrypoint to the entrypoint script
+ENTRYPOINT ["./entrypoint.sh"]
 
 # Default command arguments (can be overridden)
 CMD ["--help"]
