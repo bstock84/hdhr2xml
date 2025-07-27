@@ -13,17 +13,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  # Use docker.io for Docker Hub if empty
-  # REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ var.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
-
-
 jobs:
   build:
 
     runs-on: github-runners-bstock84-hdhr2xml
+    env:
+      IMAGE_NAME: ${{ var.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
     permissions:
       contents: read
       packages: write
