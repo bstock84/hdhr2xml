@@ -1,3 +1,7 @@
+# Sources
+
+Forked from https://github.com/ianmcodes/HDHomeRunEPG-to-XmlTv which was forked from https://github.com/IncubusVictim/HDHomeRunEPG-to-XmlTv
+
 # HDHomeRun EPG converter to XMLTV file
 <div align="right">
 <a href="https://buymeacoffee.com/incubusvictim" target="_blank"><img align="top" src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a> <img align="top" src="https://github.com/IncubusVictim/HDHomeRunEPG-to-XmlTv/blob/main/bmc_qr.png" width="100" />
